@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html class="Public LoggedOut Responsive pageIsLtr not_hasTabLinks hasSearch activeSmallLogo is-sidebarOpen hasRightSidebar is-setWidth navStyle_2 pageStyle_1 hasFlexbox hasJs NoTouch HasDragDrop">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link type="image/x-icon" href="./assets/img/sp.png" rel="shortcut icon">
+     <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,700&display=swap&subset=vietnamese" rel="preload" as="style" onload="this.onload = null;this.rel = 'stylesheet';">
+    <link type="text/css" href="./assets/css/order_me.css?v=1" rel="stylesheet" media="all">
+    <script type="text/javascript" src="./assets/js/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="./assets/js/dr-dtime.js?v=1"></script>
+
+    <style>
+        .ac_footer {
+            position: relative;
+            top: 10px;
+            height: 0;
+            text-align: center;
+            margin-bottom: 70px;
+            color: #A12000;
+        }
+        .ac_footer a {
+            color: #A12000;
+        }
+        img[height="1"], img[width="1"] {
+            display: none !important;
+        }
+    </style>
+
+    <meta content="IE=Edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+
+    <title>Phong Thủy Blog</title>
+
+    <link href="./assets/css/style.css?v=1" rel="stylesheet">
+    <link href="./assets/css/media.css?v=1" rel="stylesheet">
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-N7WXPN8');</script>
+    <!-- End Google Tag Manager -->
+           
+    <script>
+    jQuery(document).ready(function($) {
+        sendClick(true);
+        $('a.pre-link').attr('onclick', "sendClick(false);return true;");
+    });
+
+    function sendClick(first) {
+        var urlParams = new URLSearchParams(window.location.search);
+        var opid = urlParams.get('opid');
+        if (!opid) return;
+        var clickId = urlParams.get('click_id');
+        var lp = urlParams.get('lp');
+        var lp2 = urlParams.get('lp2');
+        var landingId = [lp, lp2].filter(function(v) {
+            return v;
+        }).join(',');
+        if (!landingId) landingId = 'phongthuy';
+        var xhr = new XMLHttpRequest();
+        xhr.open("POST", "https://zxc.world/v1/statistic/clicks?offer_id=vongdaibi-vn&landing_id=" + landingId +
+            "&first=" + first + "&click_id=" + clickId);
+        xhr.send();
+    }
+    </script>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N7WXPN8"
+                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<header>
+    <nav>
+        <div class="navTabs">
+            <div class="pageWidth">
+                <div class="logo-text">
+                    Blog <span class="red">Phong Thủy</span>
+                </div>
+                <ul class="navRight visitorTabs">
+                    <li class="navTab uix_searchTab">
+                        <div class="hasSearchButton" id="searchBar">
+                            <i class="uix_icon uix_icon-search" id="QuickSearchPlaceholder"></i>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<div class="breadBoxTop">
+    <div class="pageWidth">
+        <nav>
+            <fieldset class="breadcrumb">
+                <span class="OverlayTrigger jumpMenuTrigger"><i class="uix_icon uix_icon-sitemap"></i></span>
+                <div class="boardTitle">
+                </div>
+                <span class="crumbs">
+                    <span class="crust homeCrumb">
+                    <a class="crumb pre-link" href="http://vongdaibi-vn.fastbuy.biz/"><span itemprop="title"><span class="uix_breadcrumb__home__title">Trang chủ</span></span></a>
+                    <span class="arrow"><i class="uix_icon uix_icon-breadcrumbSeparator"></i></span>
+                    </span>
+                    <span class="crust selectedTabCrumb">
+                    <a class="crumb pre-link" href="http://vongdaibi-vn.fastbuy.biz/"><span itemprop="title">Tin tức</span></a>
+                    <span class="arrow"><i class="uix_icon uix_icon-breadcrumbSeparator"></i></span>
+                    </span>
+                    <span class="crust">
+                    <a class="crumb pre-link" href="http://vongdaibi-vn.fastbuy.biz/"><span itemprop="title">Phong thủy</span></a>
+                    <span class="arrow"><i class="uix_icon uix_icon-breadcrumbSeparator"></i></span>
+                    </span>
+                    <span class="crust" itemscope="itemscope" itemtype="">
+                    <a class="crumb pre-link" href="http://vongdaibi-vn.fastbuy.biz/"><span itemprop="title">Blog</span></a>
+                    <span class="arrow"><i class="uix_icon uix_icon-breadcrumbSeparator"></i></span>
+                    </span>
+                    </span>
+            </fieldset>
+        </nav>
+    </div>
+</div>
+<div class="titleBar">
+    <div class="titleBar--overlay">
+        <div class="pageWidth">
+            <div class="media__container centered">
+                <div class="media__object media--left">
+                    <div class="pageTitle__icon">
+                        <i class="mdi mdi-comment"></i>
+                    </div>
+                </div>
+                <h1>BẤT NGỜ TRÚNG VIETLOTT 71 TỶ NHỜ MÓN QUÀ QUÝ LINH THIÊNG RƯỚC TÀI LỘC...</h1>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="thread_view" id="content">
+    <div class="pageWidth">
+        <div class="pageContent">
+            <div class="uix_contentFix">
+                <div class="mainContainer">
+                    <div class="mainContent">
+                        <div class="InlineModForm section">
+                            <div class="messageList">
+                                <div class="sectionMain message staff uix_threadAuthor uix_discussionAuthor">
+                                    <div class="uix_message">
+                                        <div class="messageUserInfo">
+                                            <div class="uix_avatarHolderInner">
+                                                <div class="avatar Av47m">
+                                                    <a class="pre-link" href="http://vongdaibi-vn.fastbuy.biz/"><img src="./assets/img/tuananh.jpg"></a>
+                                                </div>
+                                            </div>
+                                            <div class="userText">
+                                                <div class="uix_userTextInner">
+                                                    <span class="username">Lê Tuấn Anh</span>
+                                                </div>
+                                                <div class="extraUserInfo is-expanded">
+                                                    <dl class="pairsJustified">
+                                                        <dt><i class="mdi mdi-account"></i></dt>
+                                                        <dd>10/08/1975</dd>
+                                                    </dl>
+                                                    <dl class="pairsJustified">
+                                                        <dt><i class="mdi mdi-message-text"></i></dt>
+                                                        <dd><span class="concealed">1,562</span></dd>
+                                                    </dl>
+                                                    <dl class="pairsJustified">
+                                                        <dt><i class="mdi mdi-thumb-up"></i></dt>
+                                                        <dd>12,482</dd>
+                                                    </dl>
+                                                    <dl class="pairsJustified">
+                                                        <dt><i class="mdi mdi-star"></i></dt>
+                                                        <dd><span class="OverlayTrigger concealed">157</span></dd>
+                                                    </dl>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="messageInfo primaryContent">
+                                            <div class="messageDetails">
+                                                    <span class="item muted"><span class="DateTime">Ngày đăng:
+													<script type="text/javascript">dtime_nums(-2, true)</script></span></span>
+                                            </div>
+                                            <div class="messageContent">
+                                                <article>
+                                                    <blockquote class="messageText SelectQuoteContainer ugc baseHtml">
+                                                        <p style="margin-top: 10px;">Tôi sinh ra và lớn lên ở Quảng Ngãi – vùng đất nổi tiếng là <b><a class="pre-link" href="http://vongdaibi-vn.fastbuy.biz/"><i>“nghèo nhất Việt Nam”</i></a></b>,
+                                                            cái nắng cái gió khắc nghiệt ở nơi đây đã nuôi nấng tôi thành một chàng trai rắn rỏi, khôi ngô nhưng lại có một cuộc đời bất hạnh.
+                                                            <b><a class="pre-link" href="http://vongdaibi-vn.fastbuy.biz/">Tôi nghĩ ông trời không công bằng, ông ban cho tôi sự sống nhưng lại không ban cho tôi được sống <i>“như một con người”.</i></a></b></p>
+                                                        <div class="content-img">
+                                                            <a class="pre-link" href="http://vongdaibi-vn.fastbuy.biz/"><img src="./assets/img/gd.jpg"></a>
+                                                        </div>
+
+                                                        <p>Sống hơn 40 năm cuộc đời, tôi chưa bao giờ biết đến từ <i>“hạnh phúc”</i>, mẹ tôi bị tật nguyền từ nhỏ, tôi là kết quả của cuộc hôn nhân không hạnh phúc
+                                                            khi cha đẻ của tôi ruồng bỏ đứa con trong bụng bà, trải qua cú shock đó nên đầu óc bà cũng không được tỉnh táo, lúc tỉnh lúc không.
+                                                            Vì bị liệt hai chân không thể làm gì, mọi thứ đều phải phụ thuộc vào bà ngoại, tôi từ khi mới lên 5, đã tự làm được mọi việc từ nấu cơm,
+                                                            giặt quần áo, vệ sinh cá nhân cho bản thân và chăm sóc cho mẹ. Nhưng thời đó kinh tế đất nước còn khó khăn đồng nghĩa cuộc sống của
+                                                            mẹ con tôi vô cùng khổ cực, ngày ngày phải đào sắn tìm khoai, có được một bữa cơm là vô cùng xa xỉ. Căn nhà chúng tôi ở rất lụp xụp
+                                                            cảm giác có thể sập xuống bất cứ lúc nào, đặc biệt lúc trời bão gió, chúng tôi sống trong sự sợ hãi, lo âu, sẵn sàng đón chờ cái chết.</p>
+
+                                                        <p>Khi tôi lên 18, mẹ mắc bệnh hiểm nghèo, không có cách nào, tôi cả gan <b><a class="pre-link" href="http://vongdaibi-vn.fastbuy.biz/">vay số tiền 20 triệu của bọn cho vay nặng lãi</a></b> để chữa bệnh cho bà.
+                                                            Lúc đó tôi nghĩ rất đơn giản là sẽ cố gắng làm lụng để kiếm tiền trả nợ, nhưng thời gian trôi qua, số tiền ấy cứ tăng lên theo
+                                                            cấp số nhân trong khi tôi lương tháng còn không đủ sống. Ngày nào chúng cũng đến đòi tiền bằng cách dọa nạt và đánh đập tôi thừa sống thiếu chết.</p>
+
+                                                        <p>Đến cái tuổi tứ tuần, tôi về quê lấy vợ, món nợ năm xưa đã lên con số hàng tỉ, gia đình tôi điêu đứng suốt cả chục năm nay vì bọn chúng,
+                                                            áp lực cuộc sống đẩy tôi đến cá độ, lô đề để tìm sự vui vẻ. Dần già nó như một cơn nghiện khiến tôi cảm thấy bất lực, biết sai mà không
+                                                            thể kiềm chế lại được, nhà đã nghèo nay còn nghèo hơn. Buồn phiền vì hoàn cảnh gia đình nên vợ tôi có thói quen đi chùa để cầu bình an vào
+                                                            ngày mùng 1 âm hàng tháng, tôi thỉnh thoảng có đi theo và thân quen với sư trụ trì ở đây. Gặp thầy, tôi giãi bày hết nỗi lòng và khao khát
+                                                            được làm lại cuộc sống, tôi thương vợ thương con, tôi muốn trở thành người đàn ông trụ cột vững chắc trong gia đình nhưng lực bất tòng tâm.
+                                                            Vừa nói tôi vừa khóc ròng. <b><a class="pre-link" href="http://vongdaibi-vn.fastbuy.biz/">Có lẽ cảm động trước lời bộc bạch chân thành của tôi, sư trụ trì tặng tôi một chiếc vòng mạ vàng, có khắc biểu tượng hoa sen nhà Phật, nói rằng đây là món quà mà Quan Thế Âm Bồ Tát ban cho tôi vì bản chất tôi vốn là người lương thiện, tương lai làm được việc lớn, có thể cứu khổ cứu nạn giúp đỡ người nghèo khổ.
+                                                                    Hãy giữ gìn nó thật cẩn thận, thành tâm tin tưởng và chờ đợi ngày đổi đời.</a></b></p>
+
+                                                        <p>Về đến nhà, tôi xem xét kĩ chiếc vòng một lượt thấy trên mặt vòng có khắc biểu tượng hoa sen và một bản kinh dịch dài, nhìn khá là đẹp và thu hút.
+                                                            Mãi sau này tôi mới biết nó có tên gọi là <b><a class="pre-link" href="http://vongdaibi-vn.fastbuy.biz/">“Vòng Chú Đại Bi”.</a></b>
+                                                            Tin lời của sư trụ trì, tôi thử đánh cược một lần xem sao, ngày nào
+                                                            tôi cũng thành tâm cầu khấn niệm phật, xoay xoay chiếc vòng trên cổ tay, nâng niu nó như một vật báu. Rồi một đêm khoảng 2 tuần sau đó,
+                                                            tôi bỗng mơ thấy Quan Thế Âm Bồ Tát, ngài đang ngồi đọc một cuốn tâm kinh nhưng không hiểu sao lúc tôi nhìn vào đó chỉ là một dãy số đơn thuần.
+                                                            Tỉnh dậy tôi vẫn nhớ mồn một, bán tính bán nghi, tôi đem số này đi chơi Vietlott.</p>
+
+                                                        <p>Khi nhận điện thoại thông báo từ ban tổ chức, tôi suýt ngã ngồi vì là người <b><a class="pre-link" href="http://vongdaibi-vn.fastbuy.biz/">trúng giải độc đắc hơn 71 tỷ đồng.</a></b>
+                                                            Tôi không tin nổi vào tai mình, phải hỏi đi hỏi lại và véo vào tay thật mạnh để xem đây có phải là mơ không.
+                                                            Sau khi đóng thuế và các khoản cần thiết, tôi run run cầm chiếc thẻ ngân hàng trên tay và khóc ròng trong hạnh phúc.
+                                                            <b><a class="pre-link" href="http://vongdaibi-vn.fastbuy.biz/">Số tiền này sẽ giúp tôi làm lại cuộc đời một lần nữa, tôi sẽ dùng nó để lo cho gia đình,
+                                                                    tu sửa lại chùa chiền và làm từ thiện hỗ trợ cho những hộ nghèo Quảng Nam.</a></b></p>
+                                                        <div class="content-img">
+                                                            <a class="pre-link" href="http://vongdaibi-vn.fastbuy.biz/"><img src="./assets/img/vietlott.jpg"></a>
+                                                        </div>
+
+                                                        <p>Vậy nên điều tôi muốn nhấn mạnh là trên đời này thực sự có phép màu chỉ cần bạn tin thôi. Và ngày hôm nay tôi lên tiếng nói lên
+                                                            sự thật vì muốn giúp những người có cuộc đời bất hạnh, đen đủi cũng sẽ gặp được vận may thay đổi cuộc đời mình.
+                                                            Đừng phí hoài thời gian nữa mà hãy trang bị ngay cho mình một chiếc bùa hộ mệnh theo bên mình. Điều mà bạn nên làm bây giờ là gì,
+                                                            thứ nhất là đặt mua ngay <b><a class="pre-link" href="http://vongdaibi-vn.fastbuy.biz/">Vòng Chú Đại Bi</a></b> qua
+                                                            <b><a class="pre-link" href="http://vongdaibi-vn.fastbuy.biz/">đây là một tiệm đồ cổ</a></b> lâu đời có tiếng tôi tình cờ biết được có bán chiếc vòng này với
+                                                            giá không hề đắt cho một món đồ giá trị như này, tôi tin rằng cuộc sống của bạn chắc chắn cũng sẽ trở nên tươi đẹp lên rất nhiều thôi.</p>
+                                                    </blockquote>
+                                                </article>
+                                            </div>
+
+                                            <div class="content-img">
+                                                <a class="pre-link" href="http://vongdaibi-vn.fastbuy.biz/"><img src="./assets/img/sp.png"></a>
+                                            </div>
+
+                                            <div class="order">
+                                                <a class="btn-order pre-link" href="http://vongdaibi-vn.fastbuy.biz/">ĐẶT VÒNG CHÚ ĐẠI BI TẠI ĐÂY</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="layout">
+                            <header data-tracking-area="main-nav" id="main-nav">
+                                <nav class="nav nav-primary">
+                                    <ul>
+                                        <li class="nav-tab nav-tab--primary tab-conversation active"><span class="publisher-nav-color"><span class="comment-count">7 BÌNH LUẬN:</span></span></li>
+                                    </ul>
+                                </nav>
+                            </header>
+                            <section id="conversation">
+                                <div class="nav nav-secondary">
+                                    <ul>
+                                        <li class="nav-tab nav-tab--secondary recommend dropdown" id="recommend-button">
+                                            <div class="thread-ชอบs">
+                                                <div>
+                                                    <span class="dropdown-toggle" data-action="recommend"><span class="label label-default"><span class="recommend-icon fa fa-heart"></span>like</span></span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="nav-tab nav-tab--secondary dropdown share-menu hidden-sm" id="thread-share-menu"><span class="dropdown-toggle" data-toggle="dropdown"><span class="fa fa-share-square-o"></span> <span class="label">share</span></span></li>
+                                    </ul>
+                                </div>
+                                <div id="posts">
+                                    <div class="post-list" id="post-list">
+                                        <ul>
+                                            <li class="post">
+                                                <div class="post-content" data-role="post-content">
+                                                    <div class="avatar hovercard">
+                                                        <div class="user"><a class="pre-link" href="http://vongdaibi-vn.fastbuy.biz/"><img data-role="user-avatar" src="./assets/img/nam.jpg"></a></div>
+                                                    </div>
+                                                    <div class="post-body">
+                                                        <div class="comment__header">
+                                                            <span class="post-byline"><span><span class="author publisher-anchor-color">Minh Đức</span></span></span>
+                                                            <span class="post-meta"><span class="bullet time-ago-bullet">•</span> <span class="time-ago">
+<script type="text/javascript">
+																dtime_nums(-1, true)
+																</script></span></span>
+                                                        </div>
+                                                        <div class="post-body-inner">
+                                                            <div class="post-message-container">
+                                                                <div class="publisher-anchor-color">
+                                                                    <div class="post-message">
+                                                                        <div>
+                                                                            <p>Mình sống ở Tây Tạng 5 năm và từng nghe đến tên chiếc vòng này nhưng không tin lắm. Giờ thì mình tin thật rồi vì chính bạn mình cũng đặt hàng qua đây và việc kinh doanh của nó phất lên như diều gặp gió. Chuyện lạ mà có thật luôn ạ.</p>
+                                                                            <a class="pre-link" href="http://vongdaibi-vn.fastbuy.biz/"><img src="assets/img/minhduc.jpg"></a>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="post ">
+                                                <div class="post-content" data-role="post-content">
+                                                    <div class="avatar hovercard">
+                                                        <div class="user"><a class="pre-link" href="http://vongdaibi-vn.fastbuy.biz/"><img data-role="user-avatar" src="./assets/img/nu.jpg"></a></div>
+                                                    </div>
+                                                    <div class="post-body">
+                                                        <div class="comment__header">
+                                                            <span class="post-byline"><span><span class="author publisher-anchor-color">Mai Lan</span></span></span>
+                                                            <span class="post-meta"><span class="bullet time-ago-bullet">•</span> <span class="time-ago">
+<script type="text/javascript">
+																dtime_nums(-1, true)
+																</script></span></span>
+                                                        </div>
+                                                        <div class="post-body-inner">
+                                                            <div class="post-message-container">
+                                                                <div class="publisher-anchor-color">
+                                                                    <div class="post-message">
+                                                                        <div>
+                                                                            <p>1 năm trước đây tôi là một bà mẹ đơn thân, phải tự tập tành kinh doanh không ai nương tựa, có lúc trong ví chỉ còn 10k không nổi mua được bữa cơm bụi. Nhưng cuối cùng may mắn đã mỉm cười khi tôi đeo chiếc <b><a class="pre-link" href="http://vongdaibi-vn.fastbuy.biz/">Vòng Chú Đại Bi</a></b> này, tôi tin vào nó, đêm đêm thành tâm cầu khấn và giờ mẹ con tôi đã có cuộc sống rất rất ổn định, thậm trí là dư giả. Cảm ơn nhiều!</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="post">
+                                                <div class="post-content" data-role="post-content">
+                                                    <div class="avatar hovercard">
+                                                        <div class="user"><a class="pre-link" href="http://vongdaibi-vn.fastbuy.biz/"><img data-role="user-avatar" src="./assets/img/nam.jpg"></a></div>
+                                                    </div>
+                                                    <div class="post-body">
+                                                        <div class="comment__header">
+                                                            <span class="post-byline"><span><span class="author publisher-anchor-color">Bùi Ngọc</span></span></span>
+                                                            <span class="post-meta"><span class="bullet time-ago-bullet">•</span> <span class="time-ago">
+<script type="text/javascript">
+																dtime_nums(-1, true)
+																</script></span></span>
+                                                        </div>
+                                                        <div class="post-body-inner">
+                                                            <div class="post-message-container">
+                                                                <div class="publisher-anchor-color">
+                                                                    <div class="post-message">
+                                                                        <div>
+                                                                            <p>Tôi vừa đặt hàng tại đây, chưa biết thực hư thế nào nhưng tư vấn rất nhiệt tình. Rất ưng ý.</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="post ">
+                                                <div class="post-content" data-role="post-content">
+                                                    <div class="avatar hovercard">
+                                                        <div class="user"><a class="pre-link" href="http://vongdaibi-vn.fastbuy.biz/"><img data-role="user-avatar" src="./assets/img/nu.jpg"></a></div>
+                                                    </div>
+                                                    <div class="post-body">
+                                                        <div class="comment__header">
+                                                            <span class="post-byline"><span><span class="author publisher-anchor-color">Lan Khuê</span></span></span>
+                                                            <span class="post-meta"><span class="bullet time-ago-bullet">•</span> <span class="time-ago">
+<script type="text/javascript">
+																dtime_nums(-2, true)
+																</script></span></span>
+                                                        </div>
+                                                        <div class="post-body-inner">
+                                                            <div class="post-message-container">
+                                                                <div class="publisher-anchor-color">
+                                                                    <div class="post-message">
+                                                                        <div>
+                                                                            <p>Mình đã được nghe một truyền thuyết về <b><a class="pre-link" href="http://vongdaibi-vn.fastbuy.biz/">Vòng Chú Đại Bi</a></b> qua một lần đi du lịch ở Tây Tạng, không nghĩ sẽ tìm mua được nó ở Việt Nam. Mua được <b><a class="pre-link" href="http://vongdaibi-vn.fastbuy.biz/">Vòng Chú Đại Bi</a></b> đã cảm thấy may mắn lắm rồi, hàng thật và giao hàng rất nhanh.</p>
+                                                                            <a class="pre-link" href="http://vongdaibi-vn.fastbuy.biz/"><img src="assets/img/lankhue.jpg"></a>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="post">
+                                                <div class="post-content" data-role="post-content">
+                                                    <div class="avatar hovercard">
+                                                        <div class="user"><a class="pre-link" href="http://vongdaibi-vn.fastbuy.biz/"><img data-role="user-avatar" src="./assets/img/nam.jpg"></a></div>
+                                                    </div>
+                                                    <div class="post-body">
+                                                        <div class="comment__header">
+                                                            <span class="post-byline"><span><span class="author publisher-anchor-color">Lê Hưng</span></span></span>
+                                                            <span class="post-meta"><span class="bullet time-ago-bullet">•</span> <span class="time-ago">
+<script type="text/javascript">
+																dtime_nums(-2, true)
+																</script></span></span>
+                                                        </div>
+                                                        <div class="post-body-inner">
+                                                            <div class="post-message-container">
+                                                                <div class="publisher-anchor-color">
+                                                                    <div class="post-message">
+                                                                        <div>
+                                                                            <p>Tôi làm kinh doanh nên chuyện phong thủy rất coi trọng, việc chuẩn bị bùa hộ mệnh tôi đã chuẩn bị từ lâu nhưng chưa thực sự có vật nào phát huy tác dụng cho đến khi tôi đeo <b><a class="pre-link" href="http://vongdaibi-vn.fastbuy.biz/">Vòng Chú Đại Bi</a></b>. Khen nhiều thì lại bảo là quảng cáo trá hình nhưng tôi không có lợi lộc gì tự việc này. Các bạn nên cân nhắc và sớm sắm cho mình chiếc vòng này đi trước khi quá muộn.</p>
+                                                                            <a class="pre-link" href="http://vongdaibi-vn.fastbuy.biz/"><img src="assets/img/lehung.jpg"></a>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="post ">
+                                                <div class="post-content" data-role="post-content">
+                                                    <div class="avatar hovercard">
+                                                        <div class="user"><a class="pre-link" href="http://vongdaibi-vn.fastbuy.biz/"><img data-role="user-avatar" src="./assets/img/nu.jpg"></a></div>
+                                                    </div>
+                                                    <div class="post-body">
+                                                        <div class="comment__header">
+                                                            <span class="post-byline"><span><span class="author publisher-anchor-color">Phan Trang</span></span></span>
+                                                            <span class="post-meta"><span class="bullet time-ago-bullet">•</span> <span class="time-ago">
+                                                                <script type="text/javascript">
+																dtime_nums(-2, true)
+																</script></span></span>
+                                                        </div>
+                                                        <div class="post-body-inner">
+                                                            <div class="post-message-container">
+                                                                <div class="publisher-anchor-color">
+                                                                    <div class="post-message">
+                                                                        <div>
+                                                                            <p>Tôi rất thích chơi Viettlot nhưng chưa lần nào trúng, chán lắm. Hôm nay sẽ thử vận may với <b><a class="pre-link" href="http://vongdaibi-vn.fastbuy.biz/">Vòng Chú Đại Bi</a></b> xem sao. Hy vọng là sẽ có tác dụng.</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="post">
+                                                <div class="post-content" data-role="post-content">
+                                                    <div class="avatar hovercard">
+                                                        <div class="user"><a class="pre-link" href="http://vongdaibi-vn.fastbuy.biz/"><img data-role="user-avatar" src="./assets/img/nu.jpg"></a></div>
+                                                    </div>
+                                                    <div class="post-body">
+                                                        <div class="comment__header">
+                                                            <span class="post-byline"><span><span class="author publisher-anchor-color">Mai Linh</span></span></span>
+                                                            <span class="post-meta"><span class="bullet time-ago-bullet">•</span> <span class="time-ago">
+<script type="text/javascript">
+																dtime_nums(-2, true)
+																</script></span></span>
+                                                        </div>
+                                                        <div class="post-body-inner">
+                                                            <div class="post-message-container">
+                                                                <div class="publisher-anchor-color">
+                                                                    <div class="post-message">
+                                                                        <div>
+                                                                            <p>Tôi tín Phật nên <b><a class="pre-link" href="http://vongdaibi-vn.fastbuy.biz/">Vòng Chú Đại Bi</a></b> đúng với mong muốn của tôi khi muốn sắm một chiếc bùa hộ mệnh cho mình. Từ khi đeo chiếc vòng, tôi cảm thấy tâm bình yên hơn, mọi chuyện trong nhà cũng hết lục đục, con cháu liên tục đạt thành tích cao trong nhiều cuộc thi. Thực sự cảm ơn rất nhiều.</p>
+                                                                            <a class="pre-link" href="http://vongdaibi-vn.fastbuy.biz/"><img src="assets/img/mailinh.jpg"></a>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li style="list-style: none; display: inline">
+                                                <div class="order">
+                                                    <a class="btn-order pre-link" href="http://vongdaibi-vn.fastbuy.biz/">ĐẶT HÀNG TẠI ĐÂY</a>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                </div><!-- sidebar -->
+                <aside class="uix_mainSidebar">
+                    <div class="sidebar" id="sidebar">
+                        <h3 class="thumbtitle thumbtitle--black thumbtitle--arrow">Bài viết nổi bật</h3>
+                        <div class="widget__toppost">
+                            <ul class="newsbox--list newsbox--widget newsbox--list--noimg">
+                                <li>
+                                    <div class="newsbox newsbox--item">
+                                        <div class="news__content">
+                                            <a class="pre-link" href="http://vongdaibi-vn.fastbuy.biz/"><img class="sidebar-img" src="./assets/img/sidebar-1.jpg"></a>
+                                            <h2 class="news__title"><a class="pre-link" href="http://vongdaibi-vn.fastbuy.biz/">Cách thu hút tài lộc vào nhà & lời khuyên từ người thành công với 2 bàn tay trắng...</a></h2>
+                                            <div class="news__meta">
+                                                <span class="news__date">lượt xem 1,246</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="newsbox newsbox--item">
+                                        <div class="news__content">
+                                            <a class="pre-link" href="http://vongdaibi-vn.fastbuy.biz/"><img class="sidebar-img" src="./assets/img/sidebar-2.jpg"></a>
+                                            <h2 class="news__title"><a class="pre-link" href="http://vongdaibi-vn.fastbuy.biz/">Gia tăng thu nhập bằng cách nào mà không phải đầu tư...</a></h2>
+                                            <div class="news__meta">
+                                                <span class="news__date">lượt xem 1,101</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="newsbox newsbox--item">
+                                        <div class="news__content">
+                                            <a class="pre-link" href="http://vongdaibi-vn.fastbuy.biz/"><img class="sidebar-img" src="./assets/img/sidebar-3.jpg"></a>
+                                            <h2 class="news__title"><a class="pre-link" href="http://vongdaibi-vn.fastbuy.biz/">Hướng đi nào giúp bạn giàu có hơn trong cuộc sống?..</a></h2>
+                                            <div class="news__meta">
+                                                <span class="news__date">lượt xem 863</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </div>
+</div>
+<footer>Bản quyền © <span class="ryear">2020</span></footer>
+
+
+<!--back to LP-->
+<script type="text/javascript">
+    function getParameterByName(name, url) {
+        if (!url) url = window.location.href;
+        name = name.replace(/[\[\]]/g, "\\$&");
+        var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+            results = regex.exec(url);
+        if (!results) return null;
+        if (!results[2]) return '';
+        return decodeURIComponent(results[2].replace(/\+/g, " "));
+    }
+
+    var lp_href;
+    lp_href = getParameterByName('lp_href');
+
+    if (!lp_href || lp_href == '') {
+        lp_href = $('a.pre-link').attr('href') + location.search;
+    } else {
+        lp_href = lp_href + location.search;
+    }
+
+    $('a.pre-link').attr('href', lp_href);
+
+    jQuery(document).ready(function($) {
+
+        if (window.history && window.history.pushState) {
+            $(window).on('popstate', function() {
+                var hashLocation = location.hash;
+                var hashSplit = hashLocation.split("#!/");
+                var hashName = hashSplit[1];
+
+                if (hashName !== '') {
+                    var hash = window.location.hash;
+                    if (hash === '') {
+                        window.location.href=lp_href;
+                        return false;
+                    }
+                }
+            });
+
+            window.history.pushState('forward', null, location.search + '#forward');
+        }
+
+    });
+</script>
+<?php
+$fbPixel = htmlspecialchars(@$_GET['fb_pixel_id'], ENT_QUOTES, 'utf-8');
+if (isset($fbPixel) && $fbPixel !== '') {
+    echo "<script>
+                !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+                n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+                n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+                t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+                document,'script','https://connect.facebook.net/en_US/fbevents.js');
+            </script>";
+    $fbPixelArr = explode(',', $fbPixel);
+    for ($i=0; $i <  count($fbPixelArr); $i++) {
+        if ($i >= 5) break;
+        $fbPixel = trim($fbPixelArr[$i]);
+        echo "<script>
+                    fbq('init', '$fbPixel');
+                    fbq('track', \"PageView\");
+                </script>
+                <noscript><img height=\"1\" width=\"1\" style=\"display:none\"
+                src=\"https://www.facebook.com/tr?id=$fbPixel&ev=PageView&noscript=1\"
+                /></noscript>";
+    }
+}
+?>
+</body>
+</html>
